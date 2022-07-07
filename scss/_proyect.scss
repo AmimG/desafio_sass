@@ -25,6 +25,10 @@
         margin-left: ($px - 495);
         color: map-get($map: $colorf, $key: 'black');
 
+        @media (max-width: 380px) {
+          font-size: 1.5rem;
+        }
+
         &:hover {
           color: map-get($map: $colorf, $key: 'blue');
           transform: 300ms;
@@ -38,6 +42,10 @@
       width: ($ptj - 70);
       margin-bottom: ($px - 500);
       padding-left: ($px - 500);
+
+      @media (max-width: 768px) {
+        display: none;
+      }
 
       li {
         list-style: none;
@@ -56,50 +64,61 @@
       }
     }
 
+    li {
+      border: ($px - 500);
+      list-style: none;
+      align-self: center;
+    }
+
     .navbar {
       padding-top: ($px - 500);
       padding-bottom: ($px - 500);
       width: ($ptj - 70);
       display: none;
 
+      @media (max-width: 768px) {
+        display: flex;
+      }
+
       a {
         font-size: 1.5rem;
         font-family: $titlefonts;
         color: map-get($map: $colorf, $key: 'black');
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
 
         &:hover {
           color: map-get($map: $colorf, $key: 'blue');
           transform: 300ms;
         }
       }
-    }
 
-    .container-fluid {
-      padding-right: ($px - 500);
-      padding-left: ($px - 500);
-      margin-right: ($px - 500);
-      margin-left: ($px - 500);
-
-      ul.dropdown {
-        margin-left: auto;
-        margin-right: ($px - 495);
-        margin-bottom: ($px - 500);
+      .container-fluid {
+        padding-right: ($px - 500);
         padding-left: ($px - 500);
+        margin-right: ($px - 500);
+        margin-left: ($px - 500);
 
-        li.navbar-toggle {
-          border: ($px - 500);
-          list-style: none;
-          align-self: center;
+        ul.dropdown {
+          margin-left: auto;
+          margin-right: ($px - 495);
+          margin-bottom: ($px - 500);
+          padding-left: ($px - 500);
 
           ul {
             background-color: map-get($map: $bgcolors, $key: 'bgdrop');
             border-radius: ($px - 495);
             border: map-get($map: $bgcolors, $key: 'bgw') solid ($px - 499);
 
-            &:hover {
-              background-color: map-get($map: $bgcolors, $key: 'bgdrophover');
-              color: map-get($map: $colorf, $key: 'white');
+            a {
+              &:hover {
+                background-color: map-get($map: $bgcolors, $key: 'bgdrophover');
+                color: map-get($map: $colorf, $key: 'white');
+              }
             }
+
 
             li {
               list-style: none;
@@ -112,6 +131,346 @@
   }
 
   // main index
+
+  // main rest
+  .bg__head {
+    background-image: url(https://img.uefa.com/imgml/uefacom/uefaeuropaconferenceleague/2020/stats/stats-bg-head-l.png);
+    background-size: $ptj;
+  }
+
+  .bg__vh {
+    min-height: $hv;
+  }
+
+  .bg__main-b {
+    background-color: map-get($map: $bgcolors, $key: 'bgmain');
+  }
+
+  .header {
+    padding: ($px - 495);
+    margin-block: ($px - 470);
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, map-get($map: $bgcolors, $key: 'bgheaderline1'), map-get($map: $bgcolors, $key: 'bgheaderline2'));
+    color: map-get($map: $colorf, $key: 'white');
+
+    h1 {
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    .header__div {
+      align-self: center;
+      text-align: center;
+      overflow: hidden;
+      width: auto;
+    }
+  }
+
+  .main__ctc {
+    width: auto;
+    display: flex;
+    margin-bottom: ($px - 470);
+
+    .section__ctc {
+      width: $ptj;
+      display: flex;
+      flex-direction: column;
+      padding: ($px - 490);
+
+      @media (max-width: 295px) {
+        padding: 0;
+      }
+
+      .article__ctc {
+        display: flex;
+        flex-direction: column;
+        padding: ($px - 490);
+        margin-block: ($px - 490);
+
+        h3 {
+          text-align: center;
+          align-self: center;
+          margin-bottom: ($px - 490);
+          font-weight: 600;
+          color: white;
+          font-weight: 400;
+          width: ($ptj - 80);
+
+          @media (max-width: 1100px) {
+            width: 40%;
+          }
+
+          @media (max-width: 991px) {
+            width: auto;
+          }
+        }
+      }
+
+      .form__ctc {
+        width: 100%;
+        height: auto;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+
+        .form__ctc2 {
+          width: 40%;
+          padding: 20px;
+          align-self: center;
+          display: flex;
+          flex-direction: column;
+          background: linear-gradient(to bottom, #009900, #006600);
+          border-radius: 20px;
+
+          @media (max-width: 1100px) {
+            width: 50%;
+          }
+
+          @media (max-width: 991px) {
+            width: 60%;
+          }
+
+          @media (max-width: 768px) {
+            width: 85%;
+          }
+
+          @media (max-width: 600px) {
+            width: 80%;
+          }
+
+          @media (max-width: 480px) {
+            width: 90%;
+            padding: 10px;
+          }
+
+          @media (max-width: 380px) {
+            width: 100%;
+          }
+
+          .form__ctc3 {
+            align-self: center;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            font-weight: 400;
+
+            @media (max-width: 768px) {
+              width: 80%;
+            }
+
+            @media (max-width: 295px) {
+              width: 95%;
+            }
+
+            label {
+              font-size: 1.5rem;
+              margin-bottom: 5px;
+            }
+
+            input {
+              box-shadow: 3px 3px black;
+              margin-bottom: 10px;
+              border-style: none;
+              border-radius: 20px;
+            }
+
+            textarea {
+              box-shadow: 3px 3px black;
+              border-style: none;
+              margin-bottom: 10px;
+              max-width: 100%;
+              min-width: 100%;
+              max-height: 80%;
+              min-height: 60%;
+            }
+          }
+
+          .form__button {
+            display: flex;
+            justify-content: center;
+
+            button {
+              font-size: 1.5rem;
+              border: none;
+              border-radius: 1.2rem;
+              height: 25px;
+              background-color: beige;
+              box-shadow: 3px 3px black;
+
+              &:hover {
+                background-color: rgb(23, 23, 253);
+                transition: 300ms;
+              }
+
+              span {
+                margin: 25px;
+
+                &:hover {
+                  color: white;
+                  transition: 300ms;
+                }
+              }
+            }
+
+          }
+        }
+
+
+        .form__perfil {
+          width: 35%;
+          padding: 20px;
+          align-self: center;
+          display: flex;
+          flex-direction: column;
+          background: linear-gradient(to bottom, #009900, #006600);
+          border-radius: 20px;
+
+          @media (max-width: 991px) {
+            width: 50%;
+          }
+
+          @media (max-width: 768px) {
+            width: 60%;
+          }
+
+          @media (max-width: 585px) {
+            width: 80%;
+          }
+
+          @media (max-width: 480px) {
+            width: 90%;
+            padding: 10px;
+          }
+
+          @media (max-width: 380px) {
+            width: 95%;
+          }
+
+          .form__img {
+            text-align: center;
+            margin-bottom: 10px;
+          }
+
+          .form__perfil2 {
+            align-self: center;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            font-weight: 400;
+            margin-bottom: 10px;
+            margin-top: 20px;
+
+            label {
+              text-align: justify;
+              font-size: 1.5rem;
+              margin-bottom: 5px;
+
+              @media (max-width: 380px) {
+                font-size: 1.2rem;
+              }
+            }
+
+            input {
+              box-shadow: 2px 2px black;
+              margin-bottom: 10px;
+              border-style: none;
+              border-radius: 20px;
+            }
+
+            .form__checkbox {
+              display: flex;
+
+              input {
+                margin-right: 5px;
+              }
+            }
+
+          }
+
+          .form__button {
+            display: flex;
+            justify-content: center;
+
+            button {
+              font-size: 1.5rem;
+              border: none;
+              border-radius: 1.2rem;
+              height: 25px;
+              background-color: beige;
+              box-shadow: 3px 3px black;
+
+              &:hover {
+                background-color: rgb(23, 23, 253);
+                transition: 300ms;
+              }
+
+              span {
+                margin: 25px;
+
+                &:hover {
+                  color: white;
+                  transition: 300ms;
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      .form__addrs {
+        width: 40%;
+        padding: 20px;
+        align-self: center;
+        display: flex;
+        background: linear-gradient(to bottom, #009900, #006600);
+        border-radius: 20px;
+        overflow: hidden;
+
+        @media (max-width: 1100px) {
+          width: 50%;
+        }
+
+        @media (max-width: 991px) {
+          width: 60%;
+        }
+
+        @media (max-width: 768px) {
+          width: 85%;
+        }
+
+        @media (max-width: 480px) {
+          width: 90%;
+        }
+
+        @media (max-width: 480px) {
+          width: 100%;
+          padding: 10px;
+        }
+
+        .form__addrs2 {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 2px 2px black;
+          border-radius: 20px;
+
+          iframe {
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+
   .bg__main {
     display: flex;
     flex-direction: column;
@@ -128,6 +487,11 @@
         padding-top: ($px - 490);
         padding-bottom: ($px - 490);
 
+        @media (max-width: 768px) {
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+
         ul {
           padding: ($px - 500);
 
@@ -137,6 +501,10 @@
 
           a {
             color: map-get($map: $colorf, $key: 'white');
+
+            @media (max-width: 768px) {
+              font-size: 1.5rem;
+            }
 
             &:hover {
               color: map-get($map: $colorf, $key: 'gy');
@@ -175,6 +543,17 @@
         align-self: center;
         font-size: $txtg;
         margin-bottom: ($px - 485);
+
+        @media (max-width: 991px) {
+          width: 90%;
+        }
+
+        @media (max-width: 768px) {
+          width: auto;
+          font-size: 3.5vw;
+          text-align: center;
+        }
+
       }
     }
 
@@ -183,8 +562,18 @@
       display: flex;
       align-self: center;
 
+      @media (max-width: 991px) {
+        width: 90%;
+      }
+
       .carousel-item div {
         text-align: center;
+
+        a {
+          @media (max-width: 768px) {
+            font-size: 1.8vw;
+          }
+        }
       }
 
       .card {
@@ -192,8 +581,26 @@
         border: ($px - 500);
         background-color: transparent;
 
+        @media (max-width: 585px) {
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+        }
+
         .card__div {
           width: ($ptj - 40);
+
+          @media (max-width: 991px) {
+            width: 65%;
+          }
+
+          @media (max-width: 768px) {
+            width: 60%;
+          }
+
+          @media (max-width: 585px) {
+            width: 100%;
+          }
 
           img {
             width: $ptj;
@@ -210,11 +617,37 @@
           flex-direction: column;
           justify-content: center;
 
+          @media (max-width: 991px) {
+            padding: 30px;
+            width: 35%;
+          }
+
+          @media (max-width: 768px) {
+            padding: 0;
+            padding-inline: 25px;
+            width: 40%;
+          }
+
+          @media (max-width: 585px) {
+            border-top: none;
+            width: 100%;
+            padding-inline: 0;
+            padding: 20px;
+          }
+
           a {
             color: map-get($map: $colorf, $key: 'white');
             font-size: ($wv - 98.5);
             text-decoration: none;
             text-align: justify;
+
+            @media (max-width: 480px) {
+              font-size: 1.5rem;
+            }
+
+            @media (max-width: 295px) {
+              font-size: 0.9rem;
+            }
 
             &:hover {
               color: map-get($map: $colorf, $key: 'gy');
@@ -226,6 +659,14 @@
           h3 {
             color: map-get($map: $colorf, $key: 'white');
             text-align: justify;
+
+            @media (max-width: 991px) {
+              font-size: 3vw;
+            }
+
+            @media (max-width: 295px) {
+              font-size: 1.1 rem;
+            }
 
             &:hover {
               color: map-get($map: $colorf, $key: 'gy');
@@ -243,28 +684,69 @@
     }
 
     .container__2 {
-      margin-top: 10px;
-      width: 80%;
+      margin-top: ($px - 490);
+      width: ($ptj - 20);
       display: flex;
       justify-content: space-between;
       align-self: center;
       text-align: center;
 
+      @media (max-width: 991px) {
+        width: 90%;
+      }
+
+      @media (max-width: 585px) {
+        display: flex;
+        flex-direction: column;
+      }
+
       div {
-        width: 22%;
+        width: ($ptj - 78);
+
+        @media (max-width: 585px) {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-block: 5px;
+        }
 
         img {
-          width: 100%;
+          width: $ptj;
         }
       }
 
       a {
-        color: white;
+        color: map-get($map: $colorf, $key: 'white');
         text-decoration: none;
-        font-size: 1.2vw;
+        font-size: ($wv - 98.8);
+
+        @media (max-width: 991px) {
+          font-size: 1.5vw;
+        }
+
+        @media (max-width: 768px) {
+          color: white;
+          text-decoration: none;
+          font-size: 1.8vw;
+        }
+
+        @media (max-width: 585px) {
+          width: 60%;
+          align-self: center;
+          margin-inline: 5px;
+          text-align: justify;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 1.2rem;
+        }
+
+        @media (max-width: 295px) {
+          font-size: 0.7rem;
+        }
 
         &:hover {
-          color: greenyellow;
+          color: map-get($map: $colorf, $key: 'gy');
           font-weight: 500;
           transition-delay: 300ms;
         }
@@ -280,40 +762,731 @@
       }
     }
 
+    .container__3 {
+      @extend .container__2;
+
+      a {
+        color: map-get($map: $colorf, $key: 'black');
+
+        &:hover {
+          color: map-get($map: $colorf, $key: 'green');
+        }
+      }
+    }
+
     .section__index-b {
       @extend .section__index;
       background-color: map-get($map: $bgcolors, $key: 'bgmain');
 
     }
+
+    .section__rsl {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      margin-bottom: 40px;
+      width: 100%;
+
+      .rsl__ttl {
+        width: 80%;
+        display: flex;
+        align-self: center;
+
+        @media (max-width: 991px) {
+          width: 95%;
+        }
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        @media (max-width: 600px) {
+          width: 95%;
+        }
+
+        @media (max-width: 585px) {
+          width: 90%;
+        }
+      }
+
+      .rsl__ttl2 {
+        text-align: justify;
+
+        h2 {
+          color: white;
+          font-size: 1.6rem;
+          margin-bottom: 1px;
+        }
+
+        span {
+          color: white;
+          font-size: 1.4rem;
+        }
+
+      }
+    }
+
+    .rsl__div {
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+      align-self: center;
+      background: linear-gradient(to bottom, #009900, #006600);
+      box-shadow: 2px 2px black;
+      border-radius: 20px;
+
+      @media (max-width: 991px) {
+        width: 95%;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      @media (max-width: 600px) {
+        width: 98%;
+      }
+
+      @media (max-width: 585px) {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .rsl__div2 {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        padding: 10px;
+        margin-block: 10px;
+        background: linear-gradient(to bottom, #2cff2c, #288b28);
+        box-shadow: 2px 2px black;
+        border-radius: 20px;
+
+        @media (max-width: 768px) {
+          width: 32%;
+          padding: 5px;
+          margin-block: 5px;
+        }
+
+        @media (max-width: 585px) {
+          width: 90%;
+          align-self: center;
+        }
+
+        .rsl__div3 {
+          width: 80%;
+          display: flex;
+          align-self: center;
+          align-items: center;
+          justify-content: space-between;
+          overflow: hidden;
+          margin-block: 5px;
+
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+
+          @media (max-width: 585px) {
+            width: 80%;
+            display: flex;
+            align-self: center;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            margin-block: 5px;
+          }
+
+          span {
+            color: white;
+            font-weight: 400;
+            font-size: 1.2rem;
+
+            @media (max-width: 600px) {
+              text-align: center;
+              align-self: center;
+
+            }
+
+            @media (max-width: 585px) {
+              color: white;
+              font-weight: 400;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
   }
 
-  // main rest
-  .bg__head {
-    background-image: url(https://img.uefa.com/imgml/uefacom/uefaeuropaconferenceleague/2020/stats/stats-bg-head-l.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .bg__vh {
-    min-height: 100vh;
-  }
-
-  .bg__main-b {
+  .section__about-br {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-block: 20px;
+    padding: 10px;
+    width: 100%;
     background-color: rgb(2, 2, 2);
 
-    .header {
-      padding: 5px;
-      margin-block: 30px;
-      display: flex;
-      justify-content: center;
-      background: linear-gradient(to bottom, #009900, #006600);
-      color: white;
+    h2 {
+      text-align: end;
+      color: rgb(240, 240, 240);
+      font-weight: 400;
+      width: 80%;
+      align-self: center;
+      font-size: 3rem;
+      margin-right: 30px;
+      margin-bottom: 15px;
 
-      .header__div {
-        align-self: center;
+      @media (max-width: 991px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 585px) {
         text-align: center;
-        overflow: hidden;
+        align-self: center;
+        font-size: 3rem;
+        margin-right: 0;
+      }
+
+      @media (max-width: 380px) {
+        font-size: 2rem;
+      }
+    }
+
+    .container__4 {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+
+      @media (max-width: 585px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+      }
+
+      div {
+        width: 45%;
+        display: flex;
+        border-radius: 20px;
+        box-shadow: 2px 2px greenyellow;
+
+        @media (max-width: 768px) {
+          width: 48%;
+        }
+
+        @media (max-width: 585px) {
+          align-self: center;
+          width: 80%;
+          margin-bottom: 20px;
+        }
+
+      }
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      .div__p {
+        padding-inline: 20px;
+        background-color: rgba(43, 43, 43, 0.244);
+
+        @media (max-width: 585px) {
+          min-height: 80%;
+          height: 203.4px;
+        }
+
+        p {
+          color: white;
+          text-align: justify;
+          align-self: center;
+          font-size: 2rem;
+
+          @media (max-width: 1100px) {
+            font-size: 1.7rem;
+          }
+
+          @media (max-width: 991px) {
+            font-size: 1.3rem;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+          }
+
+          @media (max-width: 585px) {
+            font-size: 1.8rem;
+          }
+
+          @media (max-width: 380px) {
+            font-size: 1.5rem;
+          }
+
+          @media (max-width: 295px) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .dd {
+        display: none;
+      }
+    }
+  }
+
+  .section__about-b {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-block: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(2, 2, 2);
+
+    h2 {
+      text-align: justify;
+      color: rgb(240, 240, 240);
+      font-weight: 400;
+      width: 80%;
+      align-self: center;
+      font-size: 3rem;
+      margin-left: 30px;
+      margin-bottom: 15px;
+
+      @media (max-width: 991px) {
+        font-size: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 585px) {
+        text-align: center;
+        align-self: center;
+        font-size: 3rem;
+        margin-left: 0;
+      }
+
+      @media (max-width: 380px) {
+        font-size: 2rem;
+      }
+    }
+
+    .container__4 {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+
+      @media (max-width: 585px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+
+        .dn {
+          display: none;
+        }
+      }
+
+      div {
+        width: 45%;
+        display: flex;
+        border-radius: 20px;
+        box-shadow: 2px 2px greenyellow;
+
+        @media (max-width: 768px) {
+          width: 48%;
+        }
+
+        @media (max-width: 585px) {
+          align-self: center;
+          width: 80%;
+          margin-bottom: 20px;
+        }
+      }
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      .div__p {
+        padding-inline: 20px;
+        background-color: rgba(43, 43, 43, 0.244);
+
+        @media (max-width: 585px) {
+          min-height: 80%;
+          height: 203.4px;
+        }
+
+        p {
+          color: white;
+          text-align: justify;
+          align-self: center;
+          font-size: 2rem;
+
+          @media (max-width: 1100px) {
+            font-size: 1.7rem;
+          }
+
+          @media (max-width: 991px) {
+            font-size: 1.3rem;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+          }
+
+          @media (max-width: 585px) {
+            font-size: 1.8rem;
+          }
+
+          @media (max-width: 380px) {
+            font-size: 1.5rem;
+          }
+
+          @media (max-width: 295px) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .dd {
+        display: none;
+
+        @media (max-width: 585px) {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  // footer general
+  .footer {
+    width: auto;
+    bottom: ($px - 500);
+    background-image: url(https://img.uefa.com/imgml/uefacom/uefaeuropaconferenceleague/2020/stats/stats-bg-head-l.png);
+    background-size: $ptj;
+    padding-top: ($px - 490);
+    padding-bottom: ($px - 490);
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: auto;
+    font-size: ($txtg - 0.6);
+    color: map-get($map: $colorf, $key: 'white');
+    overflow-x: hidden;
+
+    @media (max-width: 991px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+        "addrs redes redes"
+        "addrs fnav legal";
+    }
+
+    @media (max-width: 733px) {
+      padding-top: 0;
+      padding-bottom: 0;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "addrs fnav"
+        "redes legal";
+    }
+
+    @media (max-width: 585px) {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    h4 {
+      margin-bottom: ($px - 480);
+      color: map-get($map: $colorf, $key: 'gy');
+      align-self: center;
+      width: 100%;
+
+      @media (max-width: 991px) {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+        align-self: center;
+      }
+
+      @media (max-width: 733px) {
+        margin-bottom: auto;
+      }
+
+      @media (max-width: 585px) {
+        margin-bottom: 5px;
+        font-size: 2rem;
+        border-bottom: green solid 1px;
+      }
+    }
+
+    .footer__addrs {
+      width: ($ptj - 80);
+      text-align: center;
+      padding: ($px - 480);
+
+      @media (max-width: 991px) {
+        grid-area: addrs;
+        width: 100%;
+        align-self: center;
+      }
+
+      @media (max-width: 733px) {
+        width: 100%;
+        align-self: center;
+        border-right: green solid 1px;
+      }
+
+      @media (max-width: 585px) {
+        padding: 5px;
+        border: none;
+      }
+
+      address {
+        font-style: normal;
+        color: map-get($map: $colorf, $key: 'gy');
+
+        @media (max-width: 991px) {
+          margin-block: 10px;
+        }
+
+        @media (max-width: 585px) {
+          display: none;
+        }
+      }
+    }
+
+    .footer__redes {
+      @extend .footer__addrs;
+      padding: ($px - 490);
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 991px) {
+        grid-area: redes;
+        width: 90%;
+        text-align: center;
+        margin-inline: auto;
+        padding: 10px;
+        display: flex;
+        flex-flow: wrap;
+      }
+
+      @media (max-width: 733px) {
+        grid-area: redes;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        border-right: green solid 1px;
+        border-bottom: none;
+      }
+
+      @media (max-width: 585px) {
         width: auto;
+        display: flex;
+        justify-content: space-between;
+        border: none;
+
+        h4 {
+          display: none;
+        }
+      }
+
+
+      .div__redes {
+        height: ($ptj - 70);
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 991px) {
+          width: auto;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 0px;
+        }
+
+        @media (max-width: 733px) {
+          width: 100%;
+        }
+
+        @media (max-width: 585px) {
+          width: 50%;
+          height: 10%;
+          margin-bottom: 0px;
+        }
+
+        @media (max-width: 295px) {
+          width: auto;
+        }
+
+
+        a {
+          align-self: center;
+          text-decoration: none;
+          margin-inline: ($px - 490);
+
+          @media (max-width: 991px) {
+            margin-inline: 5px;
+          }
+
+          @media (max-width: 585px) {
+            margin-inline: 5px;
+          }
+
+          @media (max-width: 295px) {
+            margin-inline: 3px;
+          }
+        }
+      }
+
+      .ms-auto,
+      .me-auto {
+        margin-inline: auto;
+
+        @media (max-width: 991px) {
+          margin-inline: 0;
+        }
+
+        @media (max-width: 733px) {
+          margin-inline: auto;
+        }
+
+        @media (max-width: 585px) {
+          margin-inline: 0;
+        }
+
+        @media (max-width: 295px) {
+          margin-inline: auto;
+        }
+      }
+    }
+
+    .footer__nav {
+      padding-left: 0;
+      @extend .footer__addrs;
+      padding: ($px - 490);
+
+      @media (max-width: 991px) {
+        grid-area: fnav;
+        width: 100%;
+      }
+
+      @media (max-width: 733px) {
+        grid-area: fnav;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: none;
+      }
+
+      ul {
+        margin-top: ($px - 460);
+        padding-left: ($px - 500);
+
+        @media (max-width: 991px) {
+          margin-top: 0px;
+        }
+
+        @media (max-width: 733px) {
+          margin-top: 40px;
+        }
+
+        @media (max-width: 585px) {
+          margin-top: 0;
+        }
+
+        li {
+          list-style: none;
+          margin-top: ($px - 495);
+
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: ($txtg - 0.6);
+
+            @media (max-width: 585px) {
+              font-size: 1.5rem;
+            }
+
+            &:hover {
+              color: yellow;
+              font-weight: 500;
+              transition-delay: 250ms;
+            }
+          }
+        }
+      }
+    }
+
+    .footer__legal {
+      @extend .footer__addrs;
+      padding: ($px - 490);
+
+      @media (max-width: 991px) {
+        grid-area: legal;
+        width: 100%;
+      }
+
+      @media (max-width: 733px) {
+        grid-area: legal;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        padding: 20px;
+        border: none;
+      }
+
+      div {
+        max-height: $px;
+        max-width: ($px + 400);
+        margin-inline: auto;
+        margin-top: ($px - 460);
+
+        @media (max-width: 991px) {
+          margin-top: 0px;
+        }
+
+        @media (max-width: 733px) {
+          margin-top: 40px;
+          max-width: 300px;
+        }
+
+        @media (max-width: 585px) {
+          margin-top: 0;
+        }
+
+        span {
+          font-size: ($txtg - 0.6);
+
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+          }
+
+          @media (max-width: 733px) {
+            font-size: 1.4rem;
+          }
+
+          @media (max-width: 585px) {
+            font-size: 1.5rem;
+          }
+        }
       }
     }
   }
