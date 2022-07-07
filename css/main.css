@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&family=Roboto:wght@100;300;400&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif; }
+
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+h1 {
+  font-size: 4rem; }
+
+h2 {
+  font-size: 3rem; }
+
+h3 {
+  font-size: 2.5rem; }
+
+h4,
+p,
+a {
+  font-size: 2rem; }
+
+#body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+  #body #nav {
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(to left, #9c9c9c, #c7c7c7, #cfcfcf, #c7c7c7, #9c9c9c);
+    display: flex;
+    justify-content: space-between;
+    min-height: 40px;
+    max-height: 40px; }
+    #body #nav a {
+      align-self: center;
+      text-decoration: none; }
+      #body #nav a span {
+        font-size: 2rem;
+        font-family: "Barlow Semi Condensed", sans-serif;
+        margin-left: 5px;
+        color: black; }
+        #body #nav a span:hover {
+          color: #004cc7;
+          transform: 300ms; }
+    #body #nav ul.dis {
+      display: flex;
+      justify-content: space-around;
+      width: 30%;
+      margin-bottom: 0px;
+      padding-left: 0px; }
+      #body #nav ul.dis li {
+        list-style: none;
+        align-self: center; }
+        #body #nav ul.dis li a {
+          font-size: 1.5rem;
+          font-family: "Barlow Semi Condensed", sans-serif;
+          color: black; }
+          #body #nav ul.dis li a:hover {
+            color: #004cc7;
+            transform: 300ms; }
+    #body #nav .navbar {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      width: 30%;
+      display: none; }
+      #body #nav .navbar a {
+        font-size: 1.5rem;
+        font-family: "Barlow Semi Condensed", sans-serif;
+        color: black; }
+        #body #nav .navbar a:hover {
+          color: #004cc7;
+          transform: 300ms; }
+    #body #nav .container-fluid {
+      padding-right: 0px;
+      padding-left: 0px;
+      margin-right: 0px;
+      margin-left: 0px; }
+      #body #nav .container-fluid ul.dropdown {
+        margin-left: auto;
+        margin-right: 5px;
+        margin-bottom: 0px;
+        padding-left: 0px; }
+        #body #nav .container-fluid ul.dropdown li.navbar-toggle {
+          border: 0px;
+          list-style: none;
+          align-self: center; }
+          #body #nav .container-fluid ul.dropdown li.navbar-toggle ul {
+            background-color: rgba(85, 85, 85, 0.875);
+            border-radius: 5px;
+            border: white solid 1px; }
+            #body #nav .container-fluid ul.dropdown li.navbar-toggle ul:hover {
+              background-color: green;
+              color: white; }
+            #body #nav .container-fluid ul.dropdown li.navbar-toggle ul li {
+              list-style: none;
+              align-self: center; }
+  #body .bg__main {
+    display: flex;
+    flex-direction: column; }
+    #body .bg__main #nav2 {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      background-color: rgba(43, 43, 43, 0.244);
+      margin-top: 20px; }
+      #body .bg__main #nav2 .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px; }
+        #body .bg__main #nav2 .navbar ul {
+          padding: 0px; }
+          #body .bg__main #nav2 .navbar ul .nav-item {
+            margin-inline: 5px; }
+          #body .bg__main #nav2 .navbar ul a {
+            color: white; }
+            #body .bg__main #nav2 .navbar ul a:hover {
+              color: greenyellow;
+              transition: 500ms;
+              font-weight: 500; }
+          #body .bg__main #nav2 .navbar ul .dropdown-menu {
+            background-color: rgba(85, 85, 85, 0.875);
+            border-radius: 5px;
+            border: white solid 1px;
+            padding-block: 10px; }
+            #body .bg__main #nav2 .navbar ul .dropdown-menu:hover {
+              background-color: green;
+              color: white; }
+    #body .bg__main .section__index, #body .bg__main .section__index-w, #body .bg__main .section__index-b {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      padding: 10px;
+      width: 100%; }
+      #body .bg__main .section__index h2, #body .bg__main .section__index-w h2, #body .bg__main .section__index-b h2 {
+        text-align: justify;
+        color: white;
+        font-weight: 400;
+        width: 80%;
+        align-self: center;
+        font-size: 2rem;
+        margin-bottom: 15px; }
+    #body .bg__main .container__carrousel {
+      width: 80%;
+      display: flex;
+      align-self: center; }
+      #body .bg__main .container__carrousel .carousel-item div {
+        text-align: center; }
+      #body .bg__main .container__carrousel .card {
+        flex-flow: row;
+        border: 0px;
+        background-color: transparent; }
+        #body .bg__main .container__carrousel .card .card__div {
+          width: 60%; }
+          #body .bg__main .container__carrousel .card .card__div img {
+            width: 100%;
+            height: 100%;
+            border: white solid 0.1px; }
+        #body .bg__main .container__carrousel .card .card-body {
+          padding: 50px;
+          width: 40%;
+          border: white solid 0.1px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+          #body .bg__main .container__carrousel .card .card-body a {
+            color: white;
+            font-size: 1.5vw;
+            text-decoration: none;
+            text-align: justify; }
+            #body .bg__main .container__carrousel .card .card-body a:hover {
+              color: greenyellow;
+              font-weight: 500;
+              transition-delay: 150ms; }
+          #body .bg__main .container__carrousel .card .card-body h3 {
+            color: white;
+            text-align: justify; }
+            #body .bg__main .container__carrousel .card .card-body h3:hover {
+              color: greenyellow;
+              font-weight: 500;
+              transition-delay: 150ms; }
+      #body .bg__main .container__carrousel .carousel-control-next,
+      #body .bg__main .container__carrousel .carousel-control-prev {
+        width: 5%; }
+    #body .bg__main .container__2 {
+      margin-top: 10px;
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+      text-align: center; }
+      #body .bg__main .container__2 div {
+        width: 22%; }
+        #body .bg__main .container__2 div img {
+          width: 100%; }
+      #body .bg__main .container__2 a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2vw; }
+        #body .bg__main .container__2 a:hover {
+          color: greenyellow;
+          font-weight: 500;
+          transition-delay: 300ms; }
+    #body .bg__main .section__index-w {
+      background-color: white; }
+      #body .bg__main .section__index-w h2 {
+        color: black; }
+    #body .bg__main .section__index-b {
+      background-color: #020202; }
+  #body .bg__head {
+    background-image: url(https://img.uefa.com/imgml/uefacom/uefaeuropaconferenceleague/2020/stats/stats-bg-head-l.png);
+    background-repeat: no-repeat;
+    background-size: cover; }
+  #body .bg__vh {
+    min-height: 100vh; }
+  #body .bg__main-b {
+    background-color: #020202; }
+    #body .bg__main-b .header {
+      padding: 5px;
+      margin-block: 30px;
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(to bottom, #009900, #006600);
+      color: white; }
+      #body .bg__main-b .header .header__div {
+        align-self: center;
+        text-align: center;
+        overflow: hidden;
+        width: auto; }
