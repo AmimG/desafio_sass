@@ -1,0 +1,28 @@
+* {
+  padding: ($px - 500);
+  margin: ($px - 500);
+  font-family: $generalfonts;
+}
+
+html {
+  font-size: ($ptj - 37.5);
+  height: $ptj;
+}
+
+h1 {
+  font-size: $txth1;
+}
+
+h2 {
+  font-size: $txth2;
+}
+
+h3 {
+  font-size: $txth3;
+}
+
+h4,
+p,
+a {
+  font-size: $txtg;
+}
